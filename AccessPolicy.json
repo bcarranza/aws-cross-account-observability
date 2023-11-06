@@ -1,0 +1,14 @@
+{
+    "Version" : "2012-10-17",
+    "Statement" : [
+      {
+        "Sid" : "",
+        "Effect" : "Allow",
+        "Principal" : {
+          "AWS" : "111111111111"
+        },
+        "Action" : "logs:PutSubscriptionFilter",
+        "Resource" : "arn:aws:logs:us-east-1:222222222222:destination:testFirehoseDestination"
+      }
+    ]
+  }

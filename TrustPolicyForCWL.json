@@ -1,0 +1,17 @@
+{
+    "Statement": {
+        "Effect": "Allow",
+        "Principal": {
+            "Service": "logs.region.amazonaws.com"
+        },
+        "Action": "sts:AssumeRole",
+        "Condition": {
+            "StringLike": {
+                "aws:SourceArn": [
+                    "arn:aws:logs:region:sourceAccountId:*",
+                    "arn:aws:logs:region:recipientAccountId:*"
+                ]
+            }
+        }
+     }
+}
